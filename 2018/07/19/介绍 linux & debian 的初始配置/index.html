@@ -6,18 +6,28 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://cooluiu.com">
-  <title>uiu&#39;s blog</title>
+  <title>介绍 linux &amp; debian 的初始配置 | uiu&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Record my life">
-<meta property="og:type" content="website">
-<meta property="og:title" content="uiu&#39;s blog">
-<meta property="og:url" content="http://cooluiu.com/index.html">
+  <meta name="description" content="终于在我坚持不懈的折腾下，my pc可算是折腾好了，并成功的发布了这篇log 先上目录 介绍 linux &amp;amp; debian  debian的初始配置  修改apt软件源添加必备软件一键配置vim">
+<meta name="keywords" content="linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="介绍 linux &amp; debian 的初始配置">
+<meta property="og:url" content="http://cooluiu.com/2018/07/19/介绍 linux & debian 的初始配置/index.html">
 <meta property="og:site_name" content="uiu&#39;s blog">
-<meta property="og:description" content="Record my life">
+<meta property="og:description" content="终于在我坚持不懈的折腾下，my pc可算是折腾好了，并成功的发布了这篇log 先上目录 介绍 linux &amp;amp; debian  debian的初始配置  修改apt软件源添加必备软件一键配置vim">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://www.cooluiu.top/2018719/dog.jpeg">
+<meta property="og:image" content="http://www.cooluiu.top/2018719/linux.jpeg">
+<meta property="og:image" content="http://www.cooluiu.top/2018719/debian.jpeg">
+<meta property="og:image" content="http://www.cooluiu.top/2018719/linux:.jpeg">
+<meta property="og:image" content="http://www.cooluiu.top/2018719/1.png">
+<meta property="og:image" content="http://www.cooluiu.top/2018719/2.png">
+<meta property="og:image" content="http://www.cooluiu.top/2018719/pig.jpeg">
+<meta property="og:updated_time" content="2018-07-19T10:59:08.802Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="uiu&#39;s blog">
-<meta name="twitter:description" content="Record my life">
+<meta name="twitter:title" content="介绍 linux &amp; debian 的初始配置">
+<meta name="twitter:description" content="终于在我坚持不懈的折腾下，my pc可算是折腾好了，并成功的发布了这篇log 先上目录 介绍 linux &amp;amp; debian  debian的初始配置  修改apt软件源添加必备软件一键配置vim">
+<meta name="twitter:image" content="http://www.cooluiu.top/2018719/dog.jpeg">
   
     <link rel="alternative" href="/atom.xml" title="uiu&#39;s blog" type="application/atom+xml">
   
@@ -135,16 +145,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-介绍 linux &amp; debian 的初始配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-介绍 linux &amp; debian 的初始配置" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/19/介绍 linux & debian 的初始配置/">介绍 linux &amp; debian 的初始配置</a>
+    <h1 class="article-title" itemprop="name">
+      介绍 linux &amp; debian 的初始配置
     </h1>
   
 
@@ -166,11 +174,244 @@
 </blockquote>
 </blockquote>
 <p><br><br></p>
-        
-          <a class="article-more-a" href="/2018/07/19/介绍 linux & debian 的初始配置/#more">more >></a>
-        
+<a id="more"></a>
+<h2 id="linux-amp-amp-debian-介绍"><a href="#linux-amp-amp-debian-介绍" class="headerlink" title="linux &amp;&amp; debian 介绍"></a>linux &amp;&amp; debian 介绍</h2><p><br><br><br><img src="http://www.cooluiu.top/2018719/linux.jpeg" alt="enter image description here"></p>
+<pre><code>Linux是一套免费使用和自由传播的类Unix操作系统，是一个基于POSIX和UNIX的多用户、多任务、支持多线程和多CPU的操作系统。它能运行主要的UNIX工具软件、应用程序和网络协议。它支持32位和64位硬件。Linux继承了Unix以网络为核心的设计思想，是一个性能稳定的多用户网络操作系统。
+</code></pre><p><br><br><br><img src="http://www.cooluiu.top/2018719/debian.jpeg" alt="enter image description here"></p>
+<pre><code>广义的Debian是指一个致力于创建自由操作系统的合作组织及其作品，由于Debian项目众多内核分支中以Linux宏内核为主，而且 Debian开发者 所创建的操作系统中绝大部分基础工具来自于GNU工程 ，因此 “Debian” 常指Debian GNU/Linux                                                                 &gt; GNU简单的讲就是 GNU软件可以自由地“使用、复制、修改和发布” &lt;
+</code></pre><p><br><br><br>如果您对于linux与debian之间的关系产生了疑惑，看了这张图您就能明白：</p>
+<p><img src="http://www.cooluiu.top/2018719/linux:.jpeg" alt="enter image description here"></p>
+<p>看到没有，debian就在第一分支的左上角</p>
+<p><br><br></p>
+<h2 id="修改debian初始配置"><a href="#修改debian初始配置" class="headerlink" title="修改debian初始配置"></a>修改debian初始配置</h2><p> <strong><code>打开终端模拟器 然后再继续</code></strong> <strong>(&gt;v&lt;)</strong></p>
+<p> <strong>进行下面的操作首先是需要get root权限的</strong></p>
+<blockquote>
+<p>$ sudo + 命令</p>
+</blockquote>
+<p> 输入密码即可get root权限执行命令</p>
+<p><strong>but 为了方便 我们采用以下方式来执行命令</strong></p>
+<blockquote>
+<p>$ <code>sudo -i</code><br>输入密码即可全程操作畅通无阻了 <strong>但是root权限下操作是很危险的哦</strong></p>
+<p>$ <code>su</code> yourname<br>即可退出root权限</p>
+</blockquote>
+<p><br><br></p>
+<h3 id="apt软件源修改"><a href="#apt软件源修改" class="headerlink" title="apt软件源修改"></a>apt软件源修改</h3><p><strong>首先备份软件源配置文件（可选）</strong></p>
+<blockquote>
+<p>$ <code>cp  /etc/apt/sources.list     /home/</code></p>
+<p>复制/etc/apt/sources.list文件到/home/      </p>
+<blockquote>
+<p>运行 $ <code>mv -f /home  /etc/apt/</code> 即可恢复</p>
+</blockquote>
+</blockquote>
+<p><strong>修改软件源</strong></p>
+<blockquote>
+<p>$ <code>vi  /etc/apt/sources.list</code></p>
+</blockquote>
+<blockquote>
+<ul>
+<li><strong>删除原有配置文件 or 全部在开通加上‘#’符号注释掉</strong></li>
+<li><ul>
+<li>vi 是linux发行版本基本上都自带的文本编辑器<br>按 “<code>insert</code>“ 键 or 按 “<code>o</code>“键 进入”插入模式” 即可开始修改文本</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p><strong>自己选一个软件源加进去</strong></p>
+<blockquote>
+<p><a href="https://opsx.alibaba.com/mirror" target="_blank" rel="noopener">阿里源</a><br><a href="http://mirrors.163.com/" target="_blank" rel="noopener">163源</a><br><a href="https://mirrors.tuna.tsinghua.edu.cn/" target="_blank" rel="noopener">清华大学源</a><br><a href="http://mirrors.ustc.edu.cn/" target="_blank" rel="noopener">中科大源</a></p>
+<p>进入网站，点击帮助就好<br><img src="http://www.cooluiu.top/2018719/1.png" alt="enter image description here"><br><img src="http://www.cooluiu.top/2018719/2.png" alt="enter image description here"></p>
+</blockquote>
+<blockquote>
+<p><strong>将如图选择的链接复制 到刚刚vi打开的文件就好了</strong></p>
+<blockquote>
+<p><code>ctrl+c</code>复制 软件源<br><code>ctrl+shift+v</code>粘贴到vi<br><code>esc</code> -&gt; <code>:(shift+&#39;;&#39;)</code> -&gt; <code>wq!</code> 回车即可</p>
+</blockquote>
+</blockquote>
+<p><strong>更新</strong></p>
+<blockquote>
+<p>更新软件源</p>
+<blockquote>
+<p>$ <code>apt-get update</code><br>更新软件<br>$ <code>apt-get upgrade</code><br>更新系统<br>$ <code>apt-get dist-upgrade</code><br>卸载不需要的依赖<br>$ <code>apt-get autoremove</code><br>清除掉对于的软件包<br>$ <code>apt-get clean</code><br><strong>其实可以一步到位  (qwq)</strong><br>$ <code>apt-get update &amp;&amp; apt-get upgrade &amp;&amp; apt-get dist-upgrade &amp;&amp; apt-get autoremove &amp;&amp; apt-get clean</code></p>
+</blockquote>
+</blockquote>
+<p><br><br></p>
+<h3 id="安装必备的软件"><a href="#安装必备的软件" class="headerlink" title="安装必备的软件"></a>安装必备的软件</h3><p>安装过程如果出现依赖问题，可以输入</p>
+<blockquote>
+<p>$ <code>apt-get -f install</code>      or 更换软件源</p>
+</blockquote>
+<p><strong>vim</strong></p>
+<blockquote>
+<p>安装vim        </p>
+<blockquote>
+<p>$ <code>apt-get install vim</code></p>
+<blockquote>
+<p>vim 是vi的升级版本，它不仅兼容vi的所有指令，而且还有一些新的特性在里面。      vim可是一个强大的文本编辑器哦！</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>中文输入法</strong></p>
+<blockquote>
+<p>通过<strong>Fcitx</strong>（小企鹅输入法）安装中文输入法</p>
+<blockquote>
+<p>安装Fcitx输入法</p>
+<blockquote>
+<p>$ <code>apt-get install fcitx</code></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>安装中文输入法</p>
+<blockquote>
+<p>$ <code>apt-get install</code> +</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><code>fcitx-googlepinyin</code> 谷歌拼音输入法</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><code>fcitx-module-cloudpinyin</code> 云拼音输入法模块，来自搜狗、QQ等的云输入</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><code></code>fcitx-pinyin` 拼音</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><code>fcitx-sunpinyin</code> Sunpinyin拼音输入</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><code>fcitx-rime</code> 中州韵输入法，支持简体和繁体输入</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><code>fcitx-table-wbpy</code> 五笔拼音 </p>
+</blockquote>
+</blockquote>
+<p>解决中文输入法不能用</p>
+<blockquote>
+<p>$ <code>apt-get install fcitx-ui-classic &amp;&amp; apt-get install fcitx-ui-light</code></p>
+</blockquote>
+<p>$ <code>reboot</code>     重启之后才能ok</p>
+<p>通过<strong>IBus</strong>安装中文输入法</p>
+<blockquote>
+<p>安装IBus输入法</p>
+<blockquote>
+<p>$ <code>apt-get install ibus</code></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>安装中文输入法</p>
+<blockquote>
+<p>$ <code>apt-get install</code> +</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><code>ibus-googlepinyin</code> 谷歌拼音输入法</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><code>ibus-pinyin</code> 拼音</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><code>ibus-sunpinyin</code> Sunpinyin拼音输入</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><code>ibus-rime</code> 中州韵输入法，支持简体和繁体输入</p>
+</blockquote>
+</blockquote>
+<p>$ <code>reboot</code>     重启之后才能ok</p>
+</blockquote>
+<p><strong>wps office</strong></p>
+<blockquote>
+<p>下载<a href="http://community.wps.cn/download/" target="_blank" rel="noopener">wps for linux</a> deb 后缀的软件包（注意操作系统位数）</p>
+<blockquote>
+<p>$ <code>uname -a</code> 查看系统位数</p>
+</blockquote>
+<p>$ <code>cd</code> + 文件所下载的目录</p>
+<p>$ <code>dpkg -i</code>+ 软件包的全名 </p>
+</blockquote>
+<p><strong>git (有git仓库必备 其它可选)</strong></p>
+<blockquote>
+<p>$ <code>apt-get install git</code></p>
+</blockquote>
+<p><strong>网易云音乐</strong></p>
+<blockquote>
+<p><code>其实个人推荐</code><a href="https://music.163.com/" target="_blank" rel="noopener">web版的网易云音乐</a></p>
+<p>下载<a href="https://music.163.com/#/download" target="_blank" rel="noopener">网易云音乐 for linux</a>  ubuntu版本</p>
+<p>$ <code>cd</code> + 文件所下载的目录</p>
+<p>$ <code>dpkg -i</code>+ 软件包的全名 </p>
+</blockquote>
+<p><br><br></p>
+<h3 id="一键配置vim"><a href="#一键配置vim" class="headerlink" title="一键配置vim"></a>一键配置vim</h3><p><strong>github 上的vim的配置详细介绍：</strong><a href="https://github.com/ma6174/vim" target="_blank" rel="noopener">https://github.com/ma6174/vim</a></p>
+<p>一般vim的配置文件在 /etc/vim/vimrc</p>
+<p><strong>一键安装命令:</strong></p>
+<blockquote>
+<p>$ <code>wget -qO- https://raw.github.com/ma6174/vim/master/setup.sh | sh -x</code></p>
+</blockquote>
+<p>包含:</p>
+<blockquote>
+<p>F5 直接运行</p>
+</blockquote>
+<blockquote>
+<p>F8 编译c++</p>
+</blockquote>
+<blockquote>
+<p>F3 展开树状图</p>
+</blockquote>
+<blockquote>
+<p>自动缩进，代码高亮，以及联想等功能</p>
+</blockquote>
+<hr>
+<hr>
+<p><strong>Nice!</strong><br><img src="http://www.cooluiu.top/2018719/pig.jpeg" alt="enter image description here"></p>
+<hr>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://www.cooluiu.top/zfb.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://www.cooluiu.top/wx.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -201,16 +442,65 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/19/介绍 linux & debian 的初始配置/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://cooluiu.com/2018/07/19/介绍 linux & debian 的初始配置/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -225,13 +515,48 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text"></span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#先上目录"><span class="toc-number"></span> <span class="toc-text">先上目录</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#linux-amp-amp-debian-介绍"><span class="toc-number">1.</span> <span class="toc-text">linux &amp;&amp; debian 介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改debian初始配置"><span class="toc-number">2.</span> <span class="toc-text">修改debian初始配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#apt软件源修改"><span class="toc-number">2.1.</span> <span class="toc-text">apt软件源修改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装必备的软件"><span class="toc-number">2.2.</span> <span class="toc-text">安装必备的软件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#一键配置vim"><span class="toc-number">2.3.</span> <span class="toc-text">一键配置vim</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
 
 
+  
+  
+  
 
   
+
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://cooluiu.com/2018/07/19/介绍 linux &amp; debian 的初始配置/",
+  owner: 'cooluiu',
+  repo: 'blog-comment',
+  oauth: {
+    client_id: 'b9145050702e161635bb',
+    client_secret: 'c095f82878d41aae0f888865030dfcb7f012045f',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
   
 
 
@@ -254,8 +579,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
