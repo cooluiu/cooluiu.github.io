@@ -6,18 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://cooluiu.com">
-  <title>Archives: 2018 | uiu&#39;s blog</title>
+  <title>实现一键git将本地hexo blog仓库上传至github | uiu&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Record my life">
-<meta property="og:type" content="website">
-<meta property="og:title" content="uiu&#39;s blog">
-<meta property="og:url" content="http://cooluiu.com/archives/2018/index.html">
+  <meta name="description" content="目录 git绑定github远程仓库(ssh) Write shell script实现一键上传至github  环境: linux OS hexo blog已配置好 git">
+<meta name="keywords" content="linux,shell script">
+<meta property="og:type" content="article">
+<meta property="og:title" content="实现一键git将本地hexo blog仓库上传至github">
+<meta property="og:url" content="http://cooluiu.com/2018/07/23/实现一键git将本地hexo blog仓库上传至github/index.html">
 <meta property="og:site_name" content="uiu&#39;s blog">
-<meta property="og:description" content="Record my life">
+<meta property="og:description" content="目录 git绑定github远程仓库(ssh) Write shell script实现一键上传至github  环境: linux OS hexo blog已配置好 git">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://www.cooluiu.top/2018723/moresun.gif">
+<meta property="og:image" content="http://www.cooluiu.top/2018723/me.png">
+<meta property="og:updated_time" content="2018-07-23T04:15:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="uiu&#39;s blog">
-<meta name="twitter:description" content="Record my life">
+<meta name="twitter:title" content="实现一键git将本地hexo blog仓库上传至github">
+<meta name="twitter:description" content="目录 git绑定github远程仓库(ssh) Write shell script实现一键上传至github  环境: linux OS hexo blog已配置好 git">
+<meta name="twitter:image" content="http://www.cooluiu.top/2018723/moresun.gif">
   
     <link rel="alternative" href="/atom.xml" title="uiu&#39;s blog" type="application/atom+xml">
   
@@ -145,36 +150,102 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-实现一键git将本地hexo blog仓库上传至github" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/23/实现一键git将本地hexo blog仓库上传至github/" class="archive-article-date">
-  	<time datetime="2018-07-22T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-23</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/23/实现一键git将本地hexo blog仓库上传至github/">实现一键git将本地hexo blog仓库上传至github</a>
+    <h1 class="article-title" itemprop="name">
+      实现一键git将本地hexo blog仓库上传至github
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/07/23/实现一键git将本地hexo blog仓库上传至github/" class="archive-article-date">
+  	<time datetime="2018-07-22T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><blockquote>
+<p><strong>git绑定github远程仓库(ssh)</strong></p>
+<p><strong>Write shell script实现一键上传至github</strong></p>
+</blockquote>
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境:"></a>环境:</h2><ul>
+<li><strong>linux OS</strong></li>
+<li><strong>hexo blog已配置好</strong></li>
+<li><strong>git</strong><br><br><br> </li>
+</ul>
+<p><img src="http://www.cooluiu.top/2018723/moresun.gif" alt="enter image description here"></p>
+<a id="more"></a>
+<p><br><br></p>
+<h3 id="git绑定github远程仓库-ssh"><a href="#git绑定github远程仓库-ssh" class="headerlink" title="git绑定github远程仓库(ssh)"></a>git绑定github远程仓库(ssh)</h3><blockquote>
+<p>$<code>cd</code>+Catalog<br>$<code>git init</code><br>$<code>ssh-keygen -t rsa -C &quot;</code>  E-mail address <code>&quot;</code><br>$<code>cat ~/.ssh/id_rsa.pub</code><br><strong>复制内容</strong></p>
+<p><strong>在<a href="https://help.github.com/articles/checking-for-existing-ssh-keys/中新建一个git（名字随意）" target="_blank" rel="noopener">https://help.github.com/articles/checking-for-existing-ssh-keys/中新建一个git（名字随意）</a></strong></p>
+<p><strong>粘贴到新建的git中</strong></p>
+<p>$ <code>git remote add origin</code><a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:stormzhang/test.git<br><em>绑定远程仓库</em></p>
+</blockquote>
+<p>OK</p>
+<p><br><br></p>
+<h3 id="Write-shell-script实现一键上传至github"><a href="#Write-shell-script实现一键上传至github" class="headerlink" title="Write shell script实现一键上传至github"></a>Write shell script实现一键上传至github</h3><blockquote>
+<p>(记得先同步 <code>git pull origin master</code>)</p>
+<p>$<code>sudo /bin/</code>+ 随便给你的脚本取个名字(Do not 后缀)<br><em>This is mine: sudo /bin/updateblo</em></p>
+<p><strong>script content：</strong></p>
+<blockquote>
+<p><code>cd</code>+ catalog<br><code>hexo g</code><br><code>cd</code>+你需要上传的文件夹<br><code>git add .</code><br><code>git commit -m &quot;1&quot;</code><br><code>git push origin master</code></p>
+</blockquote>
+<p><strong>‘:’ wq 保存</strong></p>
+<blockquote>
+<p>This is mine:</p>
+<blockquote>
+<p>cd /blog<br>hexo g<br>cd public<br>git add .<br>git commit -m “1”<br>git push origin master</p>
+</blockquote>
+</blockquote>
+<p><code>sudo chmod 4777 /bin/</code>+script name</p>
+</blockquote>
+<p>直接在终端模拟器输入你脚本的名字就ok了<br><img src="http://www.cooluiu.top/2018723/me.png" alt="enter image description here"></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://www.cooluiu.top/zfb.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://www.cooluiu.top/wx.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -190,7 +261,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -203,66 +274,127 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://cooluiu.com/2018/07/23/实现一键git将本地hexo blog仓库上传至github/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/19/介绍 linux & debian 的初始配置/" class="archive-article-date">
-  	<time datetime="2018-07-18T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-19</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/19/介绍 linux & debian 的初始配置/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">介绍 linux &amp; debian 的初始配置</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/19/介绍 linux & debian 的初始配置/">介绍 linux &amp; debian 的初始配置</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/折腾日记//" class="article-tag-list-link color5">折腾日记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#目录"><span class="toc-number">1.</span> <span class="toc-text">目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#环境"><span class="toc-number">2.</span> <span class="toc-text">环境:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#git绑定github远程仓库-ssh"><span class="toc-number">2.1.</span> <span class="toc-text">git绑定github远程仓库(ssh)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Write-shell-script实现一键上传至github"><span class="toc-number">2.2.</span> <span class="toc-text">Write shell script实现一键上传至github</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+  <div id="SOHUCS" sid="实现一键git将本地hexo blog仓库上传至github" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cytHqLzOl",
+        conf: "8eebf4e032493da59ed066ef6cea776a"
+    });
+</script>
+</script>
+  
+
+  
+
+  
 
 
           </div>
@@ -285,8 +417,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
