@@ -18,7 +18,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://www.cooluiu.top/2018723/moresun.gif">
 <meta property="og:image" content="http://www.cooluiu.top/2018723/me.png">
-<meta property="og:updated_time" content="2018-07-23T04:15:52.000Z">
+<meta property="og:updated_time" content="2018-07-31T06:51:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="实现一键git将本地hexo blog仓库上传至github">
 <meta name="twitter:description" content="目录 git绑定github远程仓库(ssh) Write shell script实现一键上传至github  环境: linux OS hexo blog已配置好 git">
@@ -184,9 +184,13 @@
 <p><br><br></p>
 <h3 id="git绑定github远程仓库-ssh"><a href="#git绑定github远程仓库-ssh" class="headerlink" title="git绑定github远程仓库(ssh)"></a>git绑定github远程仓库(ssh)</h3><blockquote>
 <p>$<code>cd</code>+Catalog<br>$<code>git init</code><br>$<code>ssh-keygen -t rsa -C &quot;</code>  E-mail address <code>&quot;</code><br>$<code>cat ~/.ssh/id_rsa.pub</code><br><strong>复制内容</strong></p>
-<p><strong>在<a href="https://help.github.com/articles/checking-for-existing-ssh-keys/中新建一个git（名字随意）" target="_blank" rel="noopener">https://help.github.com/articles/checking-for-existing-ssh-keys/中新建一个git（名字随意）</a></strong></p>
+<p><strong>在github中<a href="https://github.com/settings/keys" target="_blank" rel="noopener">new ssh key</a> （名字随意）</strong></p>
 <p><strong>粘贴到新建的git中</strong></p>
 <p>$ <code>git remote add origin</code><a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:stormzhang/test.git<br><em>绑定远程仓库</em></p>
+<p><strong>对了，记得:</strong></p>
+<blockquote>
+<p><code>git config --global user.email &quot;</code><a href="mailto:you@example.com" target="_blank" rel="noopener">you@example.com</a><code>&quot;</code><br><code>git config --global user.name &quot;</code>Your Name<code>&quot;</code></p>
+</blockquote>
 </blockquote>
 <p>OK</p>
 <p><br><br></p>
